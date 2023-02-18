@@ -14,11 +14,7 @@ import { router } from "./router";
 
 <template>
   <div>
-    <span>hi,i am louis </span>
-    <div>导航栏 |
-      <router-link to="/">Home</router-link> |
-      <router-link to="/doc">Doc</router-link>
-    </div>
+    
     <router-view/>
   </div> 
 </template>

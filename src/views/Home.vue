@@ -8,7 +8,7 @@
                 <a>Github</a>
                 <router-link to="/doc">开始</router-link>
             </p>
-        </div>
+        </div>  
     </div>
 </template>
 <script lang="ts" setup>
@@ -16,38 +16,36 @@
 </script>
 <style lang="scss" scoped>
   .banner {
-  background: rgb(87, 149, 114);
-  background: linear-gradient(
-    90deg,
-    rgba(87, 149, 114, 1) 0%,
-    rgba(27, 111, 63, 1) 100%
-  );
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  clip-path: ellipse(80% 60% at 50% 40%);
-  h1,
+  // background:green;
+  // clip-path: ellipse(80% 60% at 50% 40%);
+  width:100%;
+  h1 {
+    font-size:30px;
+  }
   h2 {
-    color: white;
+    font-size:16px;
   }
   .actions {
     padding: 34px 0;
-  }
-  a {
-    background: white;
+    a {
     border-radius: 8px;
-    padding: 3px 5px;
     margin: 0 8px;
     display: inline-block;
-    $h: 28px;
+    $h: 30px;
     height: $h;
     line-height: $h;
     border-radius: 4px;
-    padding: 0 8px;
+    padding: 6px 30px;
     color: #1b6f3f;
+    background:#F9C350;
   }
+  }
+  
 }
 .features {
   margin:64px auto;

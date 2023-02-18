@@ -1,12 +1,19 @@
 <template>
     <div>
         <div class="topnav">
-            <div class="logo">LOGO</div>
-            <ul class="menu">
-                <li>菜单一</li>
-                <li>菜单二</li>
-            </ul>
-            <span class="toggleAside" @click="toggleMenu">三</span>
+            <router-link to="/" class="logo">
+                <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-Orange"></use>
+                </svg>
+            </router-link>
+            <router-link to="/doc" class="menu">
+                文档
+            </router-link>
+            <a class="toggleAside" @click="toggleMenu">
+                <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-round_menu_fill"></use>
+                </svg>
+            </a>
         </div>  
     </div>
 </template>
@@ -20,8 +27,6 @@ const toggleMenu=()=>{
 </script>
 <style lang="scss" scoped>
   .topnav{
-        background: rgb(87,149,114);
-        background: linear-gradient(90deg, rgba(87,149,114,1) 0%, rgba(27,111,63,1) 100%);
         padding:16px;  
         position:fixed;
         top:0;
@@ -34,6 +39,7 @@ const toggleMenu=()=>{
         .logo{
             
             max-width:6em;
+          margin-left:100px;
           margin-right:auto;
           color:white;
               .icon {
@@ -41,18 +47,14 @@ const toggleMenu=()=>{
        vertical-align: -0.15em;
        fill: currentColor;
        overflow: hidden;
-      
+       font-size:30px;
     }
             }
         .menu{
             list-style:none;
-            display: flex;
-            flex-wrap:nowrap;
-            white-space: nowrap;
-            li{
-              margin:0 1em;
-              color:white;
-         }
+           margin-right:40px;
+           font-size:22px;
+            
     }
     .toggleAside{
         width:40px;
@@ -62,7 +64,15 @@ const toggleMenu=()=>{
         transform: translateY(-50%);
         display: none;
         position:absolute;
-       background:fade-out($color: #000000, $amount: 0.9);
+      
+        .icon {
+       width: 2em; height: 2em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+       font-size:20px;
+    }
+       
     }
     @media(max-width:500px){
        .menu{display: none;}
