@@ -73,7 +73,7 @@ const menuView=inject<Ref<boolean>>('meV')
 }
    aside{
        z-index:9;
-        background:rgb(209, 206, 206);
+        background:#F9C350;
         width:300px;
         padding:16px 0;
         position:fixed;
