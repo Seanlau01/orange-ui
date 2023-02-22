@@ -28,8 +28,7 @@ export default {
     border-radius:calc($h/2);
     position:relative;
     outline:none;
-   }
-   span {
+    & span {
     position:absolute;
     top:2px;
     left:2px;
@@ -39,10 +38,12 @@ export default {
     border-radius:calc($h2/2);
     transition:left 250ms;
    }
-   button.checked {
+   &.checked {
     background:#F8912B;
-   }
-   button.checked span{
+    & span{
     left:calc(100% - #{$h2} - 2px);
    }
+   }
+   }
+ 
 </style>
