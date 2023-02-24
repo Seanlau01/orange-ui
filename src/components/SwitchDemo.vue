@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>Swich示例</h1>
         <Switch :value="bool" @input="bool=$event"/>
     </div>
 </template>

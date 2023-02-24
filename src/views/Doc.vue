@@ -47,7 +47,7 @@ const menuView=inject<Ref<boolean>>('meV')
 .layout{
     display:flex;
     flex-direction: column;
-    height:100vh;
+    min-height:100vh;
     .nav{
         flex-shrink:0;     
     }
@@ -84,6 +84,7 @@ const menuView=inject<Ref<boolean>>('meV')
         h2{
             margin-bottom:4px;
             padding:0 16px;
+            color:#F8912B;
         }
         ol{
             li{
@@ -93,6 +94,7 @@ const menuView=inject<Ref<boolean>>('meV')
                     display:block;
                     text-decoration:none;
                     padding:4px 16px;
+                    color:#F8912B;
                 }
                 .router-link-active{
                     background:white;
