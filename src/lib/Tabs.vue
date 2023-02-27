@@ -12,17 +12,15 @@
         </div>
         
         <div class="orange-tabs-content">
-            <component class="orange-tabs-content-item" 
-            :class="{selected:c.props.title===selected}"
-            v-for="c in defaults" 
-            :is="c"></component>
+            <component :key="current.props.title"
+            :is="current"></component>
         </div>
         
     </div>
 </template>
 <script lang="ts">
 import Tab from './Tab.vue'
-import {ref,onMounted,onUpdated} from 'vue'
+import {ref,onMounted,onUpdated,computed} from 'vue'
 export default {
     props:{
       selected:{
@@ -49,6 +47,9 @@ export default {
                 throw new Error('Tabs 子标签必须是 Tab')
             }
        })
+       const current=computed(()=>{
+        return defaults.find(tag=>tag.props.title===props.selected)
+       })
        const titles=defaults.map((tag)=>{
         return tag.props.title
        })           
@@ -56,7 +57,7 @@ export default {
           context.emit('update:selected',title)
        }
        return {
-          selectedItem,indicator,container,defaults,titles,select
+          current,selectedItem,indicator,container,defaults,titles,select
        }
     }
 }      
