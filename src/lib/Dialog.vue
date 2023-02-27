@@ -17,7 +17,7 @@
                         <Button level="main" @click="ok">OK</Button>
                         <Button @click="cancel">Cancel</Button>
                     </footer>
-                </div>
+                </div> 
             </div>
         </Teleport>
         </template>
