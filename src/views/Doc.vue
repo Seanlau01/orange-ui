@@ -68,11 +68,14 @@ const menuView=inject<Ref<boolean>>('meV')
     main{
         flex-grow:1;
         padding:16px 16px 16px 304px;
+        @media(max-width:600px){
+            padding-left:16px;
+        }
     }
 }
    aside{
        z-index:9;
-        background:#F9C350;
+        background:linear-gradient(to bottom,#1E7141 0%,#579572 100%);
         width:300px;
         padding:16px 0;
         position:fixed;
@@ -102,7 +105,7 @@ const menuView=inject<Ref<boolean>>('meV')
         }
         main{
             overflow:auto;
+            background:#F8912B;
         }
-        
         }
 </style>

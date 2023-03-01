@@ -9,7 +9,7 @@
             <router-link to="/doc" class="menu">
                 文档
             </router-link>
-            <a class="toggleAside" @click="toggleMenu">
+            <a v-if="hidHomeMenu" class="toggleAside" @click="toggleMenu">
                 <svg class="icon" aria-hidden="true">
                       <use xlink:href="#icon-round_menu_fill"></use>
                 </svg>
@@ -19,7 +19,13 @@
 </template>
 <script lang="ts" setup>
 import { inject } from "@vue/runtime-core";
-
+import { defineProps } from 'vue'
+const props=defineProps({
+    hidHomeMenu:{
+        type:Boolean,
+        default:true
+    }
+})
 const menuView=inject<import("@vue/reactivity").Ref<boolean>>('meV')
 const toggleMenu=()=>{
     menuView.value=!menuView.value
@@ -54,6 +60,7 @@ const toggleMenu=()=>{
             list-style:none;
            margin-right:40px;
            font-size:22px;
+           color:#F8912B;
             
     }
     .toggleAside{
