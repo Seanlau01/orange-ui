@@ -2,7 +2,7 @@
     <div>
         <Topnav :hidHomeMenu="false"/>
         <div class="banner">
-            <h1>SwitchUI</h1>
+            <h1>OrangeUI</h1>
             <h2>一个简单的UI框架</h2>
             <p class="actions">
                 <a>Github</a>

@@ -69,7 +69,7 @@ const menuView=inject<Ref<boolean>>('meV')
         flex-grow:1;
         padding:16px 16px 16px 304px;
         @media(max-width:600px){
-            padding-left:16px;
+            padding-left:30px;
         }
     }
 }
