@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <Topnav toggleMenuButtonVisible class="nav"/>
+        <Topnav  class="nav"/>
         <div class="content">
             <aside v-if="menuView">
             <h2>文档</h2>
@@ -97,6 +97,7 @@ const menuView=inject<Ref<boolean>>('meV')
                     text-decoration:none;
                     padding:4px 16px;
                     color:#F8912B;
+                    border-radius:10px 0 0 10px;
                 }
                 .router-link-active{
                     background:white;
